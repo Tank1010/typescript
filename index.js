@@ -81,3 +81,25 @@ function thatPrettyShit(p1, p2) {
 }
 var thatPair = thatPrettyShit("arrayMax", "onehunder");
 console.log(thatPair);
+var a = '5';
+console.log(typeof a);
+var LetDoThis = /** @class */ (function () {
+    function LetDoThis() {
+    }
+    LetDoThis.prototype.contructor = function (_nameOfName) {
+        this._nameOfName = _nameOfName;
+    };
+    LetDoThis.prototype.setValue = function (value) {
+        this._name = value;
+    };
+    LetDoThis.prototype.getValue = function () {
+        return this._name;
+    };
+    LetDoThis.prototype.toString = function () {
+        return "".concat(this._nameOfName, ": ").concat(this._name);
+    };
+    return LetDoThis;
+}());
+var doThis = new LetDoThis();
+doThis.setValue(5);
+console.log(doThis.toString());

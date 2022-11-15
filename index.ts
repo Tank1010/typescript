@@ -87,6 +87,29 @@ var thatPair =thatPrettyShit<String, String>("arrayMax","onehunder");
 console.log(thatPair);
 
 
+let a = '5';
+console.log(typeof ((<unknown>a) as string));
 
+class NamedValue<T = string> {
+    private _value: T | undefined;
+  
+    constructor(private name: string) {}
+  
+    public setValue(value: T) {
+      this._value = value;
+    }
+  
+    public getValue(): T | undefined {
+      return this._value;
+    }
+  
+    public toString(): string {
+      return `${this.name}: ${this._value}`;
+    }
+  }
 
+let doThis = new NamedValue("abc");
+doThis.setValue("a");
+
+console.log(doThis.toString());
 
